@@ -1,3 +1,4 @@
+import { Layout } from "components/Layout";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { GlobalStyles } from "styles/global";
@@ -6,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Boilerplate Nextjs</title>
+        <title>Next Agency</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
 
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

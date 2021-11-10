@@ -1,7 +1,10 @@
-import type { NextPage } from "next";
+import { Intro } from "components/Intro";
+import { Container } from "styles/pages/Home";
 
-const Home: NextPage = () => {
-  return <h1>Hello World</h1>;
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <Container>
+      <Intro />
+    </Container>
+  );
+}
